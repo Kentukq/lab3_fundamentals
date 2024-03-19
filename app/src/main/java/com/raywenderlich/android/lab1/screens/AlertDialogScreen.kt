@@ -26,5 +26,30 @@ fun AlertDialogScreen() {
 
 @Composable
 fun MyAlertDialog() {
-//TODO
+    val shouldShowDialog = remember { mutableStateOf(true) }
+
+    if (shouldShowDialog.value) {
+        AlertDialog(
+            onDismissRequest = {
+                shouldShowDialog.value = false
+                FundamentalsRouter.navigateTo(Screen.Navigation)
+            },
+            title = { Text(text = stringResource(id = R.string.warning)) },
+            text = { Text(text = stringResource(id = R.string.itis)) },
+            confirmButton = {
+                Button(
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Blue),
+                    onClick = {
+                        shouldShowDialog.value = false
+                        FundamentalsRouter.navigateTo(Screen.Navigation)
+                    }
+                ) {
+                    Text(
+                        text = stringResource(id = R.string.clousing),
+                        color = Color.White
+                    )
+                }
+            }
+        )
+    }
 }
