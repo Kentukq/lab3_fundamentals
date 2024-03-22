@@ -33,7 +33,7 @@ fun MySurface(modifier: Modifier) {
 Surface(
     modifier = modifier.size(100.dp),
     color = Color.LightGray,
-    contentColor = colorResource(id = R.color.purple_700),
+    contentColor = colorResource(id = R.color.blue),
     elevation = 1.dp,
     border = BorderStroke(1.dp, Color.Black)
 ) {
