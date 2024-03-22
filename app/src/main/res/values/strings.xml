@@ -19,4 +19,6 @@
     <string name="second"> Второй </string>
     <string name="third"> Третий </string>
     <string name="porno"> Row </string>
+    <string name="Column"> Column </string>
+    <string name="Box"> Box </string>
 </resources>
